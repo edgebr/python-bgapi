@@ -29,6 +29,7 @@ class MessageClass(IntEnum):
     GENERAL = 0x00
     KEY = 0x01
     DATA = 0x02
+    NET = 0x03
 
 
 class MessageId(IntEnum):
@@ -47,6 +48,9 @@ class MessageId(IntEnum):
     READ = 0x05
     ACK = 0x06
     DOWNLINK = 0x07
+    # net ids
+    ADR = 0x00
+    CLASS = 0x01
 
 
 class Error(IntEnum):
