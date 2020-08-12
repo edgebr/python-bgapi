@@ -51,6 +51,15 @@ class MessageId(IntEnum):
     # net ids
     ADR = 0x00
     CLASS = 0x01
+    JOIN_RECEIVE_DELAY_1 = 0x02
+    JOIN_RECEIVE_DELAY_2 = 0x03
+    RECEIVE_DELAY_1 = 0x04
+    RECEIVE_DELAY_2 = 0x05
+    DATARATE = 0x06
+    RX2_CHANNEL = 0x07
+    PNM = 0x08
+    TX_POWER = 0x09
+    CHANNEL_MASK = 0x0A
 
 
 class Error(IntEnum):

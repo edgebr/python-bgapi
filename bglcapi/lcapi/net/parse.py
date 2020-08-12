@@ -9,8 +9,16 @@ PARSE_MAP = {
     MessageType.LORA_COMMAND_RESPONSE: {
         MessageId.ADR: rsp.adr,
         MessageId.CLASS: rsp.nclass,
+        MessageId.JOIN_RECEIVE_DELAY_1: rsp.join_receive_delay_1,
+        MessageId.JOIN_RECEIVE_DELAY_2: rsp.join_receive_delay_2,
+        MessageId.RECEIVE_DELAY_1: rsp.receive_delay_1,
+        MessageId.RECEIVE_DELAY_2: rsp.receive_delay_2,
+        MessageId.DATARATE: rsp.datarate,
+        MessageId.RX2_CHANNEL: rsp.rx2_channel,
+        MessageId.PNM: rsp.pnm,
+        MessageId.TX_POWER: rsp.tx_power,
+        MessageId.CHANNEL_MASK: rsp.channel_mask,
     },
-    MessageType.LORA_EVENT: {}
 }
 
 
