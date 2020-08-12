@@ -15,6 +15,8 @@ from .bgapi import test
 from .bgapi import user
 from .lcapi import general
 from .lcapi import key
+from .lcapi import data
+from .lcapi import net
 
 PARSE_MAP = {
     0x20: {
@@ -35,6 +37,8 @@ PARSE_MAP = {
     0x78: {
         MessageClass.GENERAL: general.parse.from_binary,
         MessageClass.KEY: key.parse.from_binary,
+        MessageClass.DATA: data.parse.from_binary,
+        MessageClass.NET: net.parse.from_binary,
     }
 }
 

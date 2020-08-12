@@ -7,6 +7,7 @@ class ParseError(Exception):
 
 class MessageType(IntEnum):
     LORA_COMMAND_RESPONSE = 0x78
+    LORA_EVENT = 0xF8
     COMMAND_RESPONSE = 0x20
     EVENT = 0xa0
 
@@ -27,6 +28,8 @@ class MessageClass(IntEnum):
     USER = 0xff
     GENERAL = 0x00
     KEY = 0x01
+    DATA = 0x02
+    NET = 0x03
 
 
 class MessageId(IntEnum):
@@ -36,6 +39,27 @@ class MessageId(IntEnum):
     # key ids
     SET = 0x00
     GET = 0x01
+    # data ids
+    JOIN_MODE = 0x00
+    JOIN_STATUS = 0x01
+    JOIN = 0x02
+    SEND = 0x03
+    CONFIRM_STATUS = 0x04
+    READ = 0x05
+    ACK = 0x06
+    DOWNLINK = 0x07
+    # net ids
+    ADR = 0x00
+    CLASS = 0x01
+    JOIN_RECEIVE_DELAY_1 = 0x02
+    JOIN_RECEIVE_DELAY_2 = 0x03
+    RECEIVE_DELAY_1 = 0x04
+    RECEIVE_DELAY_2 = 0x05
+    DATARATE = 0x06
+    RX2_CHANNEL = 0x07
+    PNM = 0x08
+    TX_POWER = 0x09
+    CHANNEL_MASK = 0x0A
 
 
 class Error(IntEnum):
