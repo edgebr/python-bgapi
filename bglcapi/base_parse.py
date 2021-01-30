@@ -64,5 +64,3 @@ def from_binary(data: bytes, offset: int = 0):
         return packet, _offset
     except error:
         return None, offset
-    except KeyError as e:
-        raise ParseError(e)

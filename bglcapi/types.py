@@ -48,6 +48,8 @@ class MessageId(IntEnum):
     READ = 0x05
     ACK = 0x06
     DOWNLINK = 0x07
+    FLUSH_MAC_COMMANDS = 0x08
+    FLUSHED_MAC_COMMANDS = 0x09
     # net ids
     ADR = 0x00
     CLASS = 0x01

@@ -19,6 +19,8 @@ PARSE_MAP = {
         MessageId.SEND: evt.send,
         MessageId.DOWNLINK: evt.downlink,
         MessageId.ACK: evt.ack,
+        MessageId.FLUSH_MAC_COMMANDS: evt.flush_mac_commands,
+        MessageId.FLUSHED_MAC_COMMANDS: evt.flushed_mac_commands,
     }
 }
 
