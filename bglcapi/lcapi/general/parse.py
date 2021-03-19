@@ -14,4 +14,7 @@ PARSE_MAP = {
 
 
 def from_binary(msg_type: int, msg_id: int, data: bytes, offset: int):
-    return PARSE_MAP[msg_type][msg_id](data, offset)
+    if msg_type in PARSE_MAP and msg_id in PARSE_MAP[msg_type] :
+        return PARSE_MAP[msg_type][msg_id](data, offset)
+    else :
+        return None, offset

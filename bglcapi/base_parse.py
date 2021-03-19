@@ -52,15 +52,20 @@ def from_binary(data: bytes, offset: int = 0):
                                                                offset=_offset)
         _offset += calcsize(FORMAT)
         msg_tech = msg_type & 0x78
-        payload, _offset = PARSE_MAP[msg_tech][msg_class](msg_type, msg_id,
+        if msg_tech in PARSE_MAP and msg_class in PARSE_MAP[msg_tech]:
+            payload, _offset = PARSE_MAP[msg_tech][msg_class](msg_type, msg_id,
                                                           data, _offset)
-        packet = {
-            'msg_type': msg_type,
-            'payload_len': payload_len,
-            'msg_class': msg_class,
-            'msg_id': msg_id,
-            'payload': payload,
-        }
-        return packet, _offset
+            packet = None 
+            if payload != None :
+                packet = {
+                    'msg_type': msg_type,
+                    'payload_len': payload_len,
+                    'msg_class': msg_class,
+                    'msg_id': msg_id,
+                    'payload': payload,
+                }
+            return packet, _offset
+        else :
+            return None, _offset
     except error:
         return None, offset
