@@ -12,6 +12,8 @@ def generic_result(data: bytes, offset: int = 0):
 
 
 join = generic_result
+flush_mac_commands = generic_result
+flushed_mac_commands = generic_result
 
 
 def ack(data: bytes, offset: int = 0):

@@ -61,3 +61,4 @@ If you are interested in the latest (possibly unstable) features, you may issue 
 ## Developers
 
 This repository is currently maintained by [Arthur Crippa Búrigo](https://github.com/acburigo).
+python3 setup.py sdist bdist_wheel && cd dist/ && pip3 install *.whl && cd ..
